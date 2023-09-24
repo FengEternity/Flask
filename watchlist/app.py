@@ -4,7 +4,7 @@ from flask import render_template
 
 app = Flask(__name__)
 
-name = 'Grey Li'
+name = 'Monty_Lee'
 movies = [
     {'title': 'My Neighbor Totoro', 'year': '1988'},
     {'title': 'Dead Poets Society', 'year': '1989'},
@@ -20,7 +20,7 @@ movies = [
 
 @app.route('/') # URL 规则
 def index():
-    return render_template('index.html',nanme=name,movies=movies)
+    return render_template('index.html',name=name,movies=movies)
 
 # sudo lsof -i:5000  ## 此条指令用于查询端口正在被那些进程占据
-# sudo kill PID ## 此条指令可将上述查出来占用的端口给删除掉，其中，PID根据上述查询出来的结果而定
+# sudo kill -9 PID ## 此条指令可将上述查出来占用的端口给删除掉，其中，PID根据上述查询出来的结果而定
